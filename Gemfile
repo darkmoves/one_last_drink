@@ -35,6 +35,9 @@ end
 # dot env rails to hide credentials
 gem 'dotenv-rails', :groups => [:development, :test]
 
+# yelpster
+gem 'yelpster'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
