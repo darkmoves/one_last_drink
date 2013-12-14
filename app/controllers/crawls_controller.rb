@@ -1,5 +1,10 @@
 class CrawlsController < ApplicationController
+
 	def index
+
+	end
+
+	def show
 		client = Yelp::Client.new
 		request = Yelp::V2::Search::Request::GeoPoint.new(
 								term: 'bars',
@@ -15,4 +20,5 @@ class CrawlsController < ApplicationController
 		end
 		@bars = bars
 	end
+	
 end
