@@ -1,8 +1,8 @@
 Pubcrawl::Application.routes.draw do
   
   # get 'bars/index' => 'bars#index'
-  root 'crawls#index'
-  get 'crawl' => 'crawls#show'
+  root 'main#index'
+  get 'crawl/:id' => 'crawls#show'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
