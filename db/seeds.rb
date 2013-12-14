@@ -20,6 +20,3 @@ Station.create(name:'Broadway' , lat: 42.342884, long: -71.057349)
 Station.create(name:'Andrew' , lat: 42.329362, long: -71.056845)
 Station.create(name:'JFK/UMASS' , lat: 42.320732, long: -71.051717)
 Station.create(name:'Savin Hill' , lat: 42.312672, long: -71.052747)
-
-
-
