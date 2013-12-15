@@ -17,8 +17,7 @@ class Station < ActiveRecord::Base
 											rating: bar['rating'],
 											)
 		end
-		binding.pry
-		@bar = bars[Random.rand(1..bars.length)]
+		@bar = bars[Random.rand(0..(bars.length-1))]
 	end
 
 end
