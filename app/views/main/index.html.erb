@@ -1,11 +1,6 @@
 <h3>main#index</h3>
 
-<select name="station">
-  <% @stations.each do |station| %>
-	  <option value=<%= station.name %>><%= station.name %></option>
-	<% end %>
-</select>
-
-<%= form_for(@crawl),  do |f| %>
-	<%= f.text_field :name %>
+<%= form_tag("/crawls/create", method: "post") do %>
+	<%= select_tag(:station, options_from_collection_for_select(@stations, "id", "name")) %>
+	<%= submit_tag value="One More Drink!"%>
 <% end %>
