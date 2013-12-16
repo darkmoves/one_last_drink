@@ -1,5 +1,5 @@
 class Station < ActiveRecord::Base
-	has_and_belongs_to_many :crawls
+	has_and_belongs_to_many :bars
 
 	def find_bar
 		client = Yelp::Client.new
