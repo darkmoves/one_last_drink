@@ -1,2 +1,11 @@
 <h3>main#index</h3>
 
+<select name="station">
+  <% @stations.each do |station| %>
+	  <option value=<%= station.name %>><%= station.name %></option>
+	<% end %>
+</select>
+
+<%= form_for(@crawl),  do |f| %>
+	<%= f.text_field :name %>
+<% end %>

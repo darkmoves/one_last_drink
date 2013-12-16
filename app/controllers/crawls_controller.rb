@@ -4,6 +4,10 @@ class CrawlsController < ApplicationController
 
 	end
 
+	def create
+		
+	end
+
 	def show
 
 	end
