@@ -1,8 +1,6 @@
 Pubcrawl::Application.routes.draw do
   
   root 'main#index', as: 'root'
-  get 'crawls/:id' => 'crawls#show'
-  post 'crawls/create' => 'crawls#create'
   get 'bars/show' => 'bars#show', as: 'barcrawl'
   post 'bars/create' => 'bars#create'
   
