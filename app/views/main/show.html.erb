@@ -5,13 +5,14 @@
 <div class="bar-container">
 	<p><%= @name %></p>
 	<ul>
-		<li><%= @address %></li>
-		<li><%= @rating %></li>
+		<li>Address: <%= @address %></li>
+		<li>Rating: <%= @rating %></li>
 	</ul>
 </div>
 
 <div class="time-container">
-	<%= Time.now %>
+	<%= @station.last_train_sb %></br>
+	<%= TimeDifference.between(@station.last_train_sb, Time.now).in_weeks %>
 </div>
 
 <%= link_to 'Another Round!', home_path %>
