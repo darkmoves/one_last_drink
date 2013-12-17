@@ -13,16 +13,7 @@ class Station < ActiveRecord::Base
 								limit: 10)
 			client.search(request)
 		end
-
-		bars = []
-		response['businesses'].each do |bar|
-			bars << Bar.new(name: bar['name'],
-											address: bar['location']['display_address'],
-											rating: bar['rating'],
-											)
-		end
-		# Randomizes results, so even the cached results still become random. 
-		@bar = bars[Random.rand(0..(bars.length-1))]
+		@bar = response['businesses'][Random.rand(0..(response['businesses'].length))]
 	end
 
 end
