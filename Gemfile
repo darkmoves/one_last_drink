@@ -40,6 +40,9 @@ gem 'dotenv-rails', :groups => [:development, :test]
 # yelpster
 gem 'yelpster'
 
+# calculate time differences
+gem 'time_difference'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
