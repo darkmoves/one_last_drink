@@ -13,8 +13,7 @@ class MainController < ApplicationController
 
 	def show
 		@station = Station.find(params[:id])
-		binding.pry
-		@bar = Bar.last
+		@bar = @station.find_bar
 	end
 
 end
