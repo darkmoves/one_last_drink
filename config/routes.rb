@@ -1,8 +1,7 @@
 Pubcrawl::Application.routes.draw do
   
-  root 'main#index', as: 'root'
+  root 'main#index', as: 'home'
   get 'main/show' => 'main#show', as: 'suggestion'
-  post 'main/create' => 'main#create'
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
