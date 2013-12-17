@@ -4,8 +4,8 @@ class CreateStations < ActiveRecord::Migration
       t.text :name
       t.decimal :lat
       t.decimal :long
-      t.time :last_train_nb
-      t.time :last_train_sb
+      t.datetime :last_train_nb
+      t.datetime :last_train_sb
       t.text :line
 
       t.timestamps
