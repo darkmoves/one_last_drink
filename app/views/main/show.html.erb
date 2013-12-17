@@ -1,9 +1,17 @@
-<h3>bars#show</h3>
+<h1>Suggestion!</h1>
 
-<%= @station.name %></br>
+<h3><%= @station.name %></h3>
 
-<%= @name %>
-<%= @address %>
-<%= @rating %>
+<div class="bar-container">
+	<p><%= @name %></p>
+	<ul>
+		<li><%= @address %></li>
+		<li><%= @rating %></li>
+	</ul>
+</div>
+
+<div class="time-container">
+	<%= Time.now %>
+</div>
 
 <%= link_to 'Another Round!', home_path %>
