@@ -1,6 +1,6 @@
 
-Station.create(name:'Alewife', lat: 42.395588, long: -71.141948, last_train_nb: nil,last_train_sb: Time.new(1970,1,1,0,22,0,'-05:00'), line: 'red')
-Station.create(name:'Davis', lat: 42.396197, long: -71.121926, last_train_nb: Time.new(3000,1,1,1,15,0) ,last_train_sb: Time.new(3000,1,1,0,25,0), line: 'red')
+Station.create(name:'Alewife', lat: 42.395588, long: -71.141948, last_train_nb: nil,last_train_sb: "0:22", line: 'red')
+Station.create(name:'Davis', lat: 42.396197, long: -71.121926, last_train_nb: Time.local(3000,1,1,1,15,0) ,last_train_sb: Time.local(3000,1,1,0,25,0), line: 'red')
 Station.create(name:'Porter', lat: 42.388505, long: -71.119148, last_train_nb: "1:12",last_train_sb: "0:28", line: 'red')
 Station.create(name:'Harvard', lat: 42.373653, long: -71.118954, last_train_nb: "1:09",last_train_sb: "0:31", line: 'red')
 Station.create(name:'Central', lat: 42.365603, long: -71.104031, last_train_nb: "1:06",last_train_sb: "0:34", line: 'red')
