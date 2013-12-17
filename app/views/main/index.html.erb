@@ -1,6 +1,6 @@
 <h3>main#index</h3>
 
-<%= form_tag("/bars/create", method: "post") do %>
+<%= form_tag("/main/create", method: "post") do %>
 	<%= select_tag('id', options_from_collection_for_select(@stations, :id, :name)) %>
 	<%= submit_tag "One More Drink!" %>
 <% end %>
