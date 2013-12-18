@@ -16,4 +16,13 @@ class Station < ActiveRecord::Base
 		@bar = response['businesses'][Random.rand(0..(response['businesses'].length - 1))]
 	end
 
+	def last_train(direction)
+		if direction == 'nb'
+			self.last_train_nb
+		elsif direction == 'sb'
+			self.last_train_sb
+		else 
+		end
+	end
+
 end
