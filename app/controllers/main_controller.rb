@@ -4,7 +4,7 @@ class MainController < ApplicationController
 		@red_line_stations = Station.where(line: 'red')
 		@orange_line_stations = Station.where(line: 'orange')
 		@green_line_stations = Station.where(line: 'green')
-		@blue_line_stations = Station.where(lind: 'blue')
+		@blue_line_stations = Station.where(line: 'blue')
 	end
 
 	def show
@@ -17,7 +17,7 @@ class MainController < ApplicationController
 
 		# Extract bar attributes from the bar hash to display in the view.
 		@name = @bar['name']
-		@address = @bar['location']['display_address'].to_sentence
+		@address = @bar['location']['display_address'].split.join(", ")
 		@rating = @bar['rating']
 
 		# Select the last train time using the last_train method and direction variable, taken from the params hash.
