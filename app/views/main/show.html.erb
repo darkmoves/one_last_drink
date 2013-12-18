@@ -12,7 +12,7 @@
 
 <div class="time-container">
 	<%= @station.last_train_sb %></br>
-	<%= TimeDifference.between(@station.last_train_sb, Time.now).in_weeks %>
+	<p>You have <%= @hour %>:<%= @min %> until the last train!</p>
 </div>
 
 <%= link_to 'Another Round!', home_path %>

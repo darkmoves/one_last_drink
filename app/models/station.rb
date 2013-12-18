@@ -13,7 +13,7 @@ class Station < ActiveRecord::Base
 								limit: 10)
 			client.search(request)
 		end
-		@bar = response['businesses'][Random.rand(0..(response['businesses'].length))]
+		@bar = response['businesses'][Random.rand(0..(response['businesses'].length - 1))]
 	end
 
 end
