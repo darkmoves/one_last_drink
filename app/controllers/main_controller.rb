@@ -28,13 +28,9 @@ class MainController < ApplicationController
 		# Get the time remaining until the last train using the time_comparison class method. Returns a 2 element hash with hours, minutes.
 		time = Calculation.time_comparison(t_train, t_now)
 
-		# Create the variable to display time using the elements from the time hash. Below method adds a 0 before single digit minutes for reasonable display.
-		if time[1] < 10
-			@time = "#{time[0]}:0#{time[1]}"
-		else
-			@time = "#{time[0]}:#{time[1]}"
-		end
-
+		# Create the variable to display time using the elements from the time hash. format_time  method adds a 0 before single digit minutes for display.
+		@time = Calculation.format_time(time)
+	
 	end
 
 end

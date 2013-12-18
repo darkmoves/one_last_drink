@@ -21,4 +21,12 @@ class Calculation
 		[@hour,@min]
 	end
 
+	def Calculation.format_time(time)
+		if time[1] < 10
+		 "#{time[0]}:0#{time[1]}"
+		else
+		 "#{time[0]}:#{time[1]}"
+		end
+	end
+
 end
