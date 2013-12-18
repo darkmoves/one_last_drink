@@ -12,15 +12,14 @@ class MainController < ApplicationController
 		@rating = @bar['rating']
 
 		t_train = @station.last_train_sb
-		t_now = Time.now
+		t_now = Time.now.utc
 
 		time = Calculation.time_comparison(t_train, t_now)
-		@hour = time[0]
 
 		if time[1] < 10
-			@min = "0#{time[1]}"
+			@time = "#{time[0]}:0#{time[1]}"
 		else
-			@min = time[1]
+			@time = "#{time[0]}:#{time[1]}"
 		end
 
 	end

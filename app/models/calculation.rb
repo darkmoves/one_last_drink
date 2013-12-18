@@ -1,7 +1,6 @@
 class Calculation
 
 	def Calculation.time_comparison(t_train, t_now)
-
 		if (t_train.hour >= t_now.hour) & (t_train.min >= t_now.min)
 			@hour = t_train.hour - t_now.hour
 			@min = t_train.min - t_now.min
@@ -20,7 +19,6 @@ class Calculation
 		end
 
 		[@hour,@min]
-
 	end
 
 end
