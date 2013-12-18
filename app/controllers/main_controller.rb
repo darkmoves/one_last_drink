@@ -16,7 +16,13 @@ class MainController < ApplicationController
 
 		time = Calculation.time_comparison(t_train, t_now)
 		@hour = time[0]
-		@min = time[1]
+
+		if time[1] < 10
+			@min = "0#{time[1]}"
+		else
+			@min = time[1]
+		end
+
 	end
 
 end
