@@ -2,7 +2,7 @@
 
 <div class="line" id='red'>	
 	<%= form_tag("/main/show", method: "get") do %>
-		<%= select_tag('id', options_from_collection_for_select(@stations, :id, :name)) %></br>
+		<%= select_tag('id', options_from_collection_for_select(@red_line_stations, :id, :name)) %></br>
 		<%= label_tag(:direction_nb, "Alewife") %>
 		<%= radio_button_tag(:direction, 'nb') %></br>
 		<%= label_tag(:direction_sb, "Ashmont/Braintree") %>
@@ -13,7 +13,7 @@
 
 <div class="line" id='orange'>	
 	<%= form_tag("/main/show", method: "get") do %>
-		<%= select_tag('id', options_from_collection_for_select(@stations, :id, :name)) %></br>
+		<%= select_tag('id', options_from_collection_for_select(@orange_line_stations, :id, :name)) %></br>
 		<%= label_tag(:direction_nb, "Oak Grove") %>
 		<%= radio_button_tag(:direction, 'nb') %></br>
 		<%= label_tag(:direction_sb, "Forest Hills") %>

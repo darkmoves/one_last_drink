@@ -14,20 +14,30 @@ Station.create(name:'Andrew', lat: 42.329362, long: -71.056845, last_train_nb: T
 Station.create(name:'JFK/UMASS', lat: 42.320732, long: -71.051717, last_train_nb: Time.new(1970,1,1,0,42,0,"-05:00"),last_train_sb: Time.new(1970,1,1,0,58,0,"-05:00"), line: 'red')
 Station.create(name:'Savin Hill', lat: 42.312672, long: -71.052747, last_train_nb: Time.new(1970,1,1,0,39,0,"-05:00"),last_train_sb: Time.new(1970,1,1,1,1,0,"-05:00"), line: 'red')
 Station.create(name:'Fields Corner', lat: 42.300175, long: -71.061561, last_train_nb: Time.new(1970,1,1,0,36,0,"-05:00") , last_train_sb: Time.new(1970,1,1,1,4,0,"-05:00") , line: 'red')
-Station.create(name:'Shawmut Station' , lat: 42.293136, long: -71.065649, last_train_nb: Time.new(1970,1,1,0,33,0,"-05:00") , last_train_sb: Time.new(1970,1,1,1,7,0,"-05:00") , line: 'red')
-Station.create(name:'Ashmont Station' , lat: 42.284675, long: -71.064571, last_train_nb: Time.new(1970,1,1,0,30,0,"-05:00") , last_train_sb: nil , line: 'red')
-Station.create(name:'North Quincy Station' , lat: 42.275233, long: -71.029504, last_train_nb: Time.new(1970,1,1,0,30,0,"-05:00") , last_train_sb: Time.new(1970,1,1,1,1,0,"-05:00") , line: 'red')
-Station.create(name:'Wollaston Station' , lat: 42.266472, long: -71.020288, last_train_nb: Time.new(1970,1,1,0,27,0,"-05:00") , last_train_sb: Time.new(1970,1,1,1,4,0,"-05:00") , line: 'red')
-Station.create(name:'Quincy Center Station' , lat: 42.251727, long: -71.005358, last_train_nb: Time.new(1970,1,1,0,24,0,"-05:00") , last_train_sb: Time.new(1970,1,1,1,7,0,"-05:00") , line: 'red')
-Station.create(name:'Quincy Adams Station' , lat: 42.233331, long: -71.006979, last_train_nb: Time.new(1970,1,1,0,21,0,"-05:00") , last_train_sb: Time.new(1970,1,1,1,10,0,"-05:00") , line: 'red')
-Station.create(name:'Braintree Station' , lat: 42.207835, long: -71.001029, last_train_nb: Time.new(1970,1,1,0,18,0,"-05:00") , last_train_sb: nil , line: 'red')
+Station.create(name:'Shawmut', lat: 42.293136, long: -71.065649, last_train_nb: Time.new(1970,1,1,0,33,0,"-05:00") , last_train_sb: Time.new(1970,1,1,1,7,0,"-05:00") , line: 'red')
+Station.create(name:'Ashmont', lat: 42.284675, long: -71.064571, last_train_nb: Time.new(1970,1,1,0,30,0,"-05:00") , last_train_sb: nil , line: 'red')
+Station.create(name:'North Quincy', lat: 42.275233, long: -71.029504, last_train_nb: Time.new(1970,1,1,0,30,0,"-05:00") , last_train_sb: Time.new(1970,1,1,1,1,0,"-05:00") , line: 'red')
+Station.create(name:'Wollaston', lat: 42.266472, long: -71.020288, last_train_nb: Time.new(1970,1,1,0,27,0,"-05:00") , last_train_sb: Time.new(1970,1,1,1,4,0,"-05:00") , line: 'red')
+Station.create(name:'Quincy Center', lat: 42.251727, long: -71.005358, last_train_nb: Time.new(1970,1,1,0,24,0,"-05:00") , last_train_sb: Time.new(1970,1,1,1,7,0,"-05:00") , line: 'red')
+Station.create(name:'Quincy Adams', lat: 42.233331, long: -71.006979, last_train_nb: Time.new(1970,1,1,0,21,0,"-05:00") , last_train_sb: Time.new(1970,1,1,1,10,0,"-05:00") , line: 'red')
+Station.create(name:'Braintree', lat: 42.207835, long: -71.001029, last_train_nb: Time.new(1970,1,1,0,18,0,"-05:00") , last_train_sb: nil , line: 'red')
 
 # ORANGE LINE STATIONS
-Station.create(name:'Oak Grove' , lat: 42.266472, long: -71.020288, last_train_nb: Time.new(1970,1,1,0,27,0,"-05:00") , last_train_sb: Time.new(1970,1,1,1,4,0,"-05:00") , line: 'orange')
-Station.create(name:'Malden Center' , lat: 42.251727, long: -71.005358, last_train_nb: Time.new(1970,1,1,0,24,0,"-05:00") , last_train_sb: Time.new(1970,1,1,1,7,0,"-05:00") , line: 'orange')
-Station.create(name:'Wellington' , lat: 42.233331, long: -71.006979, last_train_nb: Time.new(1970,1,1,0,21,0,"-05:00") , last_train_sb: Time.new(1970,1,1,1,10,0,"-05:00") , line: 'orange')
-Station.create(name:'Sullivan Square' , lat: 42.207835, long: -71.001029, last_train_nb: Time.new(1970,1,1,0,18,0,"-05:00") , last_train_sb: nil , line: 'orange')
+Station.create(name:'Oak Grove', lat: 42.435145, long:-71.071672, last_train_nb: Time.new(1970,1,1,0,27,0,"-05:00") , last_train_sb: Time.new(1970,1,1,1,4,0,"-05:00") , line: 'orange')
+Station.create(name:'Malden Center', lat: 42.251727, long: -71.073754, last_train_nb: Time.new(1970,1,1,0,24,0,"-05:00") , last_train_sb: Time.new(1970,1,1,1,7,0,"-05:00") , line: 'orange')
+Station.create(name:'Wellington', lat: 42.404256, long: -71.081221, last_train_nb: Time.new(1970,1,1,0,21,0,"-05:00") , last_train_sb: Time.new(1970,1,1,1,10,0,"-05:00") , line: 'orange')
+Station.create(name:'Sullivan Square', lat: 42.384146, long: -71.077058, last_train_nb: Time.new(1970,1,1,0,18,0,"-05:00") , last_train_sb: nil , line: 'orange')
 
+# GREEN LINE STATIONS
+Station.create(name:'Lechmere', lat: 42.266472, long: -71.020288, last_train_nb: Time.new(1970,1,1,0,27,0,"-05:00") , last_train_sb: Time.new(1970,1,1,1,4,0,"-05:00") , line: 'green')
+Station.create(name:'Science Park', lat: 42.251727, long: -71.005358, last_train_nb: Time.new(1970,1,1,0,24,0,"-05:00") , last_train_sb: Time.new(1970,1,1,1,7,0,"-05:00") , line: 'green')
+Station.create(name:'Haymarket', lat: 42.233331, long: -71.006979, last_train_nb: Time.new(1970,1,1,0,21,0,"-05:00") , last_train_sb: Time.new(1970,1,1,1,10,0,"-05:00") , line: 'green')
+Station.create(name:'Government Center', lat: 42.207835, long: -71.001029, last_train_nb: Time.new(1970,1,1,0,18,0,"-05:00") , last_train_sb: nil , line: 'green')
 
+# BLUE LINE STATIONS
+Station.create(name:'Wonderland', lat: 42.414079, long: -70.992236, last_train_nb: Time.new(1970,1,1,0,27,0,"-05:00") , last_train_sb: Time.new(1970,1,1,1,4,0,"-05:00") , line: 'blue')
+Station.create(name:'Revere Beach', lat: 42.407409, long: -70.992365, last_train_nb: Time.new(1970,1,1,0,24,0,"-05:00") , last_train_sb: Time.new(1970,1,1,1,7,0,"-05:00") , line: 'blue')
+Station.create(name:'Beachmont', lat: 42.397419, long: -70.992161, last_train_nb: Time.new(1970,1,1,0,21,0,"-05:00") , last_train_sb: Time.new(1970,1,1,1,10,0,"-05:00") , line: 'blue')
+Station.create(name:'Suffolk Downs', lat: 42.390121, long: -70.997064, last_train_nb: Time.new(1970,1,1,0,18,0,"-05:00") , last_train_sb: nil , line: 'blue')
 
 

@@ -1,7 +1,10 @@
 class MainController < ApplicationController
 
 	def index
-		@stations = Station.all
+		@red_line_stations = Station.where(line: 'red')
+		@orange_line_stations = Station.where(line: 'orange')
+		@green_line_stations = Station.where(line: 'green')
+		@blue_line_stations = Station.where(lind: 'blue')
 	end
 
 	def show
