@@ -1,4 +1,4 @@
-
+# RED LINE STATIONS
 Station.create(name:'Alewife', lat: 42.395588, long: -71.141948, last_train_nb: nil,last_train_sb: Time.new(1970,1,1,0,22,0,"-05:00"), line: 'red')
 Station.create(name:'Davis', lat: 42.396197, long: -71.121926, last_train_nb: Time.new(1970,1,1,1,15,0,"-05:00") ,last_train_sb: Time.new(1970,1,1,0,25,0,"-05:00"), line: 'red')
 Station.create(name:'Porter', lat: 42.388505, long: -71.119148, last_train_nb: Time.new(1970,1,1,1,12,0,"-05:00"),last_train_sb: Time.new(1970,1,1,0,28,0,"-05:00"), line: 'red')
@@ -21,3 +21,13 @@ Station.create(name:'Wollaston Station' , lat: 42.266472, long: -71.020288, last
 Station.create(name:'Quincy Center Station' , lat: 42.251727, long: -71.005358, last_train_nb: Time.new(1970,1,1,0,24,0,"-05:00") , last_train_sb: Time.new(1970,1,1,1,7,0,"-05:00") , line: 'red')
 Station.create(name:'Quincy Adams Station' , lat: 42.233331, long: -71.006979, last_train_nb: Time.new(1970,1,1,0,21,0,"-05:00") , last_train_sb: Time.new(1970,1,1,1,10,0,"-05:00") , line: 'red')
 Station.create(name:'Braintree Station' , lat: 42.207835, long: -71.001029, last_train_nb: Time.new(1970,1,1,0,18,0,"-05:00") , last_train_sb: nil , line: 'red')
+
+# ORANGE LINE STATIONS
+Station.create(name:'Oak Grove' , lat: 42.266472, long: -71.020288, last_train_nb: Time.new(1970,1,1,0,27,0,"-05:00") , last_train_sb: Time.new(1970,1,1,1,4,0,"-05:00") , line: 'orange')
+Station.create(name:'Malden Center' , lat: 42.251727, long: -71.005358, last_train_nb: Time.new(1970,1,1,0,24,0,"-05:00") , last_train_sb: Time.new(1970,1,1,1,7,0,"-05:00") , line: 'orange')
+Station.create(name:'Wellington' , lat: 42.233331, long: -71.006979, last_train_nb: Time.new(1970,1,1,0,21,0,"-05:00") , last_train_sb: Time.new(1970,1,1,1,10,0,"-05:00") , line: 'orange')
+Station.create(name:'Sullivan Square' , lat: 42.207835, long: -71.001029, last_train_nb: Time.new(1970,1,1,0,18,0,"-05:00") , last_train_sb: nil , line: 'orange')
+
+
+
+
