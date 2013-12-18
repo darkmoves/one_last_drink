@@ -14,7 +14,7 @@ Station.create(name:'Andrew', lat: 42.329362, long: -71.056845, last_train_nb: T
 Station.create(name:'JFK/UMASS', lat: 42.320732, long: -71.051717, last_train_nb: Time.new(1970,1,1,0,42,0,"-05:00"),last_train_sb: Time.new(1970,1,1,0,58,0,"-05:00"), line: 'red')
 Station.create(name:'Savin Hill', lat: 42.312672, long: -71.052747, last_train_nb: Time.new(1970,1,1,0,39,0,"-05:00"),last_train_sb: Time.new(1970,1,1,1,1,0,"-05:00"), line: 'red')
 Station.create(name:'Fields Corner', lat: 42.300175, long: -71.061561, last_train_nb: Time.new(1970,1,1,0,36,0,"-05:00") , last_train_sb: Time.new(1970,1,1,1,4,0,"-05:00") , line: 'red')
-Station.create(name:'Shawmut Station' , lat: 42.293136, long: -71.065649, last_train_nb: Time.new(1970,1,1,0,33,0,"-05:00") , last_train_sb: Time.new(1970,1,1,,1,7,"-05:00") , line: 'red')
+Station.create(name:'Shawmut Station' , lat: 42.293136, long: -71.065649, last_train_nb: Time.new(1970,1,1,0,33,0,"-05:00") , last_train_sb: Time.new(1970,1,1,1,7,0,"-05:00") , line: 'red')
 Station.create(name:'Ashmont Station' , lat: 42.284675, long: -71.064571, last_train_nb: Time.new(1970,1,1,0,30,0,"-05:00") , last_train_sb: nil , line: 'red')
 Station.create(name:'North Quincy Station' , lat: 42.275233, long: -71.029504, last_train_nb: Time.new(1970,1,1,0,30,0,"-05:00") , last_train_sb: Time.new(1970,1,1,1,1,0,"-05:00") , line: 'red')
 Station.create(name:'Wollaston Station' , lat: 42.266472, long: -71.020288, last_train_nb: Time.new(1970,1,1,0,27,0,"-05:00") , last_train_sb: Time.new(1970,1,1,1,4,0,"-05:00") , line: 'red')
