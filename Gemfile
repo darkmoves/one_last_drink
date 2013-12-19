@@ -46,6 +46,9 @@ gem 'time_difference'
 # gem for rails 4 asset precompile for heroku
 gem 'rails_12factor', group: :production
 
+# add foundation
+gem 'foundation-rails'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
