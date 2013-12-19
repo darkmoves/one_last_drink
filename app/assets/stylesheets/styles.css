@@ -12,17 +12,30 @@ html {
 .line-container {
 	height: 40px;	
 	margin-bottom: 10px;
+	font-family: 'Source Sans Pro', sans-serif;
 }
 
 #red-line-container {
 	background: red;
 }
 
-.station-dropdown {
-	font-size: 20px;
-/*	text-indent: 20%;*/
-	padding-left: auto;
-	padding-right: auto;
-	text-align: center;
+/* station selection styles*/
+.line-form label {
+	width: 120px;
+	margin-right: 8px;
+	display: inline;
 }
 
+.line-form input {
+
+}
+
+.station-dropdown {
+	font-size: 20px;
+}
+
+/* google fonts */
+/*font-family: 'Source Sans Pro', sans-serif;
+font-family: 'Arvo', serif;
+font-family: 'Exo 2', sans-serif;
+font-family: 'Archivo Narrow', sans-serif;*/
