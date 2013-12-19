@@ -1,15 +1,25 @@
-<h3>Drink or Train</h3>
+<h3>One Last Drink</h3>
 
-<div class="line" id='red'>	
-	<%= form_tag("/main/show", method: "get") do %>
-		<%= select_tag('id', options_from_collection_for_select(@red_line_stations, :id, :name)) %></br>
-		<%= label_tag(:direction_nb, "Alewife") %>
-		<%= radio_button_tag(:direction, 'nb') %></br>
-		<%= label_tag(:direction_sb, "Ashmont/Braintree") %>
-		<%= radio_button_tag(:direction, 'sb') %></br>
-		<%= submit_tag "One More Drink!" %>
-	<% end %>
+<div class='row'>
+
+	<div class='line-container' id='red-line-container'>
+
+	</div>
+
+	<div class="line-form small-10 small-centered columns" id='red-line-form'>	
+		<%= form_tag("/main/show", method: "get") do %>
+			<%= select_tag('id', options_from_collection_for_select(@red_line_stations, :id, :name), class: 'station-dropdown') %>
+			<%= label_tag(:direction_nb, "Alewife") %>
+			<%= radio_button_tag(:direction, 'nb') %>
+			<%= label_tag(:direction_sb, "Ashmont/Braintree") %>
+			<%= radio_button_tag(:direction, 'sb') %>
+			<%= submit_tag "One More Drink!" %>
+		<% end %>
+	</div>
+
+
 </div>
+
 </br>
 
 <div class="line" id='orange'>	

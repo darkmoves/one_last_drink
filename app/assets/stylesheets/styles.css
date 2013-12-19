@@ -1,7 +1,28 @@
+/* global styles*/
 html {
 	text-align: center;
 }
 
+/* line selection styles */
 .bar-container ul {
 	list-style-type: none;
 }
+
+/* train and destination selection styles */
+.line-container {
+	height: 40px;	
+	margin-bottom: 10px;
+}
+
+#red-line-container {
+	background: red;
+}
+
+.station-dropdown {
+	font-size: 20px;
+/*	text-indent: 20%;*/
+	padding-left: auto;
+	padding-right: auto;
+	text-align: center;
+}
+
