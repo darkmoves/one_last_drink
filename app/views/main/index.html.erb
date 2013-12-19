@@ -3,11 +3,11 @@
 <div class='row'>
 
 	<div class='line-container small-10 small-centered columns' id='red-line-container'>
-		<h3><strong><em>>>>>>>>>>> Red Line >>>>>>>>></em></strong></h3>
+		<h3><strong><em>RED LINE</em></strong></h3>
 	</div>
 
 	<div class="line-form small-10 small-centered columns" id='red-line-form'>	
-		<%= form_tag("/main/show", method: "get") do %>
+		<%= form_tag "/main/show", method: "get" do %>
 			<%= select_tag('id', options_from_collection_for_select(@red_line_stations, :id, :name), class: 'station-dropdown') %>
 			<%= label_tag(:direction_nb, "Alewife") %>
 			<%= radio_button_tag(:direction, 'nb') %></br>
@@ -19,15 +19,14 @@
 
 </div>
 
-</br>
 <div class='row'>
 
 	<div class='line-container small-10 small-centered columns' id='orange-line-container'>
-		<h3><strong><em>>>>>>>>>>> Orange Line >>>>>>>>></em></strong></h3>
+		<h3><strong><em>ORANGE LINE</em></strong></h3>
 	</div>
 
 	<div class="line-form small-10 small-centered columns" id='orange-line-form'>	
-		<%= form_tag("/main/show", method: "get") do %>
+		<%= form_tag "/main/show", method: "get" do %>
 			<%= select_tag('id', options_from_collection_for_select(@orange_line_stations, :id, :name), class: 'station-dropdown') %>
 			<%= label_tag(:direction_nb, "Oak Grove") %>
 			<%= radio_button_tag(:direction, 'nb') %></br>
@@ -38,9 +37,13 @@
 	</div>
 
 </div>
-</br>
 
 <div class='row'>
+
+	<div class='line-container small-10 small-centered columns' id='green-line-container'>
+		<h3><strong><em>GREEN LINE</em></strong></h3>
+	</div>
+
 	<div class="line-form small-10 small-centered columns" id='green'>	
 		<%= form_tag("/main/show", method: "get") do %>
 			<%= select_tag('id', options_from_collection_for_select(@green_line_stations, :id, :name), class: 'station-dropdown') %>
@@ -51,10 +54,15 @@
 			<%= submit_tag "One More Drink!" %>
 		<% end %>
 	</div>
+
 </div>
-</br>
 
 <div class='row'>
+
+	<div class='line-container small-10 small-centered columns' id='blue-line-container'>
+		<h3><strong><em>BLUE LINE</em></strong></h3>
+	</div>
+
 	<div class="line-form small-10 small-centered columns" id='blue'>	
 		<%= form_tag("/main/show", method: "get") do %>
 			<%= select_tag('id', options_from_collection_for_select(@blue_line_stations, :id, :name), class: 'station-dropdown') %>
