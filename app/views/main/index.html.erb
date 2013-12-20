@@ -1,12 +1,12 @@
 <h3>ONE LAST DRINK</h3>
 
-<div class='row'>
+<div>
 
-	<div class='line-container small-10 small-centered columns' id='red-line-container'>
+	<div class='line-container small-centered columns' id='red-line-container'>
 		<h3><strong><em>RED LINE</em></strong></h3>
 	</div>
 
-	<div class="line-form small-10 small-centered columns" id='red-line-form'>	
+	<div class="line-form small-8 small-centered columns" id='red-line-form'>	
 		<%= form_tag "/main/show", method: "get" do %>
 			<%= select_tag('id', options_from_collection_for_select(@red_line_stations, :id, :name), class: 'station-dropdown') %>
 			<%= label_tag(:direction_nb, "Alewife") %>

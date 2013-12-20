@@ -11,16 +11,14 @@ html {
 /* train and destination selection styles */
 .line-container {
 	height: 80px;	
-	margin-bottom: 10px;
+	margin: 0px auto;
 	font-family: 'Source Sans Pro', sans-serif;
-	border-radius: 10px;
-	color: white;
+/*	border-radius: 10px;*/
+	width:100%;
 }
 
 .line-container h3 {
 	line-height: 80px;
-	margin-top: auto;
-	margin-bottom: auto;
 	color: white;
 	font-size: 60px;
 }
