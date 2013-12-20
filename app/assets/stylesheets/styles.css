@@ -41,7 +41,8 @@ html {
 
 /* station selection styles*/
 .line-form {
-	display:inline;
+	display:none;
+	padding: 20px;
 }
 
 .line-form label {
