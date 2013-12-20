@@ -9,8 +9,16 @@ var Page = {
 					})
 				},
 
-				fadeTutorial: function(class_select, p_fadeOut_id, p_fadeIn_id){
+				fadeTutorialOnClick: function(class_select, p_fadeOut_id, p_fadeIn_id){
 					$(class_select).click(function(){
+						$(p_fadeOut_id).fadeOut('slow', function(){
+							$(p_fadeIn_id).fadeIn('slow');
+						});
+					})
+				},
+
+				fadeTutorialOnChange: function(class_select, p_fadeOut_id, p_fadeIn_id){
+					$(class_select).change(function(){
 						$(p_fadeOut_id).fadeOut('slow', function(){
 							$(p_fadeIn_id).fadeIn('slow');
 						});
@@ -25,6 +33,7 @@ $(function(){
 				Page.slideToViz('#orange-line-container', '#orange-line-form', '#red-line-form', '#green-line-form', '#blue-line-form');
 				Page.slideToViz('#green-line-container', '#green-line-form', '#red-line-form', '#orange-line-form', '#blue-line-form');
 				Page.slideToViz('#blue-line-container', '#blue-line-form', '#red-line-form', '#orange-line-form', '#green-line-form');
-				Page.fadeTutorial('.line-container', '#select-line', '#select-station');
-				Page.fadeTutorial('option', '#select-station', '#select-destination');
+				Page.fadeTutorialOnClick('.line-container', '#select-line', '#select-station');
+				Page.fadeTutorialOnChange('.station-dropdown', '#select-station', '#select-destination');
+				Page.fadeTutorialOnClick('input', '#select-destination', '#select-submit');
 })
