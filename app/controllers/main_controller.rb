@@ -30,7 +30,10 @@ class MainController < ApplicationController
 
 		# Create the variable to display time using the elements from the time hash. format_time  method adds a 0 before single digit minutes for display.
 		@time = Calculation.format_time(time)
-	
+		
+		# Use the time difference to pick a message to display.
+		@message = Calculation.find_message(@time, @name)
+
 	end
 
 end

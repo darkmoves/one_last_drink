@@ -1,17 +1,15 @@
-<h1>Suggestion!</h1>
+<h4> The last train leaves <strong><%= @station.name %></strong> in...</h4>
+<div class="time-container">
+	<h3><%=@time[0]%> HOURS, <%=@time[1]%> MINUTES</h3>
+</div>
 
-<h3><%= @station.name %></h3>
+<h4><%= @message %></h4>
 
 <div class="bar-container">
-	<p><%= @name %></p>
-	<ul>
-		<li>Address: <%= @address %></li>
-		<li>Rating: <%= @rating %></li>
-	</ul>
+	<h4><strong><%= @name %></strong></h4>
+	<h5><%=@address%></h5>
 </div>
 
-<div class="time-container">
-	<p>You have <%= @time %> until the last train!</p>
-</div>
 
 <%= link_to 'Another Round!', home_path %>
+
