@@ -3,6 +3,11 @@ html {
 	text-align: center;
 }
 
+/*tutorial styles*/
+.tutorial {
+	display:none;
+}
+
 /* line selection styles */
 .bar-container ul {
 	list-style-type: none;

@@ -1,17 +1,19 @@
 var Page = {
 
-				toggleViz: function(line_id, form_id){
-					$(line_id).click(function(){
-						$(form_id).toggle();
-					})
-				},
-
 				slideToViz: function(line_id, form_id, form_id_2, form_id_3, form_id_4){
 					$(line_id).click(function(){
 						$(form_id).slideToggle('slow');
 						$(form_id_2).slideUp('slow');
 						$(form_id_3).slideUp('slow');
 						$(form_id_4).slideUp('slow');
+					})
+				},
+
+				fadeTutorial: function(class_select, p_fadeOut_id, p_fadeIn_id){
+					$(class_select).click(function(){
+						$(p_fadeOut_id).fadeOut('slow', function(){
+							$(p_fadeIn_id).fadeIn('slow');
+						});
 					})
 				}
 
@@ -23,4 +25,6 @@ $(function(){
 				Page.slideToViz('#orange-line-container', '#orange-line-form', '#red-line-form', '#green-line-form', '#blue-line-form');
 				Page.slideToViz('#green-line-container', '#green-line-form', '#red-line-form', '#orange-line-form', '#blue-line-form');
 				Page.slideToViz('#blue-line-container', '#blue-line-form', '#red-line-form', '#orange-line-form', '#green-line-form');
+				Page.fadeTutorial('.line-container', '#select-line', '#select-station');
+				Page.fadeTutorial('option', '#select-station', '#select-destination');
 })
