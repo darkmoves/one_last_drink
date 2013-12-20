@@ -70,11 +70,15 @@ html {
 
 /*results page styling*/
 .time-container {
-	height: 60px;
+	height: 80px;
 }
 
 .bar-container {
-	height: 100px;
+	height: 150px;
+}
+
+.link a{
+	font-size: 20px;
 }
 /* google fonts */
 /*font-family: 'Source Sans Pro', sans-serif;
