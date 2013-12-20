@@ -4,6 +4,10 @@ html {
 }
 
 /*tutorial styles*/
+.tutorial-container {
+	height: 75px;	
+}
+
 .tutorial {
 	display:none;
 	font-size: 25px;
