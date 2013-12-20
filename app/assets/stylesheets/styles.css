@@ -6,8 +6,12 @@ html {
 /*tutorial styles*/
 .tutorial {
 	display:none;
+	font-size: 25px;
 }
 
+.tutorial-first {
+	font-size: 25px;
+}
 /* line selection styles */
 .bar-container ul {
 	list-style-type: none;
