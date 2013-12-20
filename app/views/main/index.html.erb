@@ -1,6 +1,6 @@
 <h3>ONE LAST DRINK</h3>
 
-<div>
+<div class='red-line'>
 
 	<div class='line-container small-centered columns' id='red-line-container'>
 		<h3><strong><em>RED LINE</em></strong></h3>
@@ -19,7 +19,7 @@
 
 </div>
 
-<div class='row'>
+<div class='orange-line'>
 
 	<div class='line-container small-10 small-centered columns' id='orange-line-container'>
 		<h3><strong><em>ORANGE LINE</em></strong></h3>
@@ -38,13 +38,13 @@
 
 </div>
 
-<div class='row'>
+<div class='green-line'>
 
 	<div class='line-container small-10 small-centered columns' id='green-line-container'>
 		<h3><strong><em>GREEN LINE</em></strong></h3>
 	</div>
 
-	<div class="line-form small-10 small-centered columns" id='green'>	
+	<div class="line-form small-10 small-centered columns" id='green-line-form'>	
 		<%= form_tag("/main/show", method: "get") do %>
 			<%= select_tag('id', options_from_collection_for_select(@green_line_stations, :id, :name), class: 'station-dropdown') %>
 			<%= label_tag(:direction_nb, "Lechmere") %>
@@ -57,13 +57,13 @@
 
 </div>
 
-<div class='row'>
+<div class='blue-line'>
 
 	<div class='line-container small-10 small-centered columns' id='blue-line-container'>
 		<h3><strong><em>BLUE LINE</em></strong></h3>
 	</div>
 
-	<div class="line-form small-10 small-centered columns" id='blue'>	
+	<div class="line-form small-10 small-centered columns" id='blue-line-form'>	
 		<%= form_tag("/main/show", method: "get") do %>
 			<%= select_tag('id', options_from_collection_for_select(@blue_line_stations, :id, :name), class: 'station-dropdown') %>
 			<%= label_tag(:direction_nb, "Wonderland") %>
