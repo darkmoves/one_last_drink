@@ -20,13 +20,12 @@ class MainController < ApplicationController
 		@address = @bar['location']['display_address'].split.join(", ")
 		@rating = @bar['rating']
 
-		if (@station.name == 'Alewife' || @station.name == 'Oak Grove' || @station.name == 'Lechmere' || @station.name == 'Wonderland') && (direction == 'nb')
-
+			# if (@station.name == 'Alewife' || @station.name == 'Oak Grove' || @station.name == 'Lechmere' || @station.name == 'Wonderland') && (direction == 'nb')
+		if (@station.nb_endpoint == true && direction == 'nb') || (@station.sb_endpoint == true && direction == 'sb')
 			@valid = false
+			# elsif (@station.name == 'Ashmont' || @station.name == 'Braintree' || @station.name == 'Forest Hills' || @station.name == 'Boston College' || @station.name == 'Cleveland Circle' || @station.name == 'Riverside' || @station.name == 'Heath Street' || @station.name == 'Bowdoin') && (direction == 'sb')
 
-		elsif (@station.name == 'Ashmont' || @station.name == 'Braintree' || @station.name == 'Forest Hills' || @station.name == 'Boston College' || @station.name == 'Cleveland Circle' || @station.name == 'Riverside' || @station.name == 'Heath Street' || @station.name == 'Bowdoin') && (direction == 'sb')
-
-			@valid = false
+			# @valid = false
 
 		else
 			
