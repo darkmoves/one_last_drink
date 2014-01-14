@@ -8,6 +8,14 @@ gem 'pg'
 
 gem 'pry-rails', group: :development
 
+group :test do
+	gem 'rspec'
+	gem 'simplecov'
+	gem 'coveralls'
+	gem 'shoulda-matchers'
+	gem 'webmock'
+end
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
