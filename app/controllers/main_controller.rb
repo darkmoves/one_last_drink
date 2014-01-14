@@ -20,15 +20,7 @@ class MainController < ApplicationController
 		@address = @bar['location']['display_address'].split.join(", ")
 		@rating = @bar['rating']
 
-			# if (@station.name == 'Alewife' || @station.name == 'Oak Grove' || @station.name == 'Lechmere' || @station.name == 'Wonderland') && (direction == 'nb')
-		if (@station.nb_endpoint == true && direction == 'nb') || (@station.sb_endpoint == true && direction == 'sb')
-			@valid = false
-			# elsif (@station.name == 'Ashmont' || @station.name == 'Braintree' || @station.name == 'Forest Hills' || @station.name == 'Boston College' || @station.name == 'Cleveland Circle' || @station.name == 'Riverside' || @station.name == 'Heath Street' || @station.name == 'Bowdoin') && (direction == 'sb')
-
-			# @valid = false
-
-		else
-			
+		if Trip.valid?(@station, direction)
 			@valid = true
 			# Select the last train time using the last_train method and direction variable, taken from the params hash.
 			# Declare the current time in UTC to match the time zone of the scheduled last trains. 		
@@ -43,7 +35,8 @@ class MainController < ApplicationController
 			
 			# Use the time difference to pick a message to display.
 			@message = Calculation.find_message(@time, @name)
-
+		else
+			@valid = false
 		end
 
 	end
