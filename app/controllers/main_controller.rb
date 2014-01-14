@@ -8,6 +8,7 @@ class MainController < ApplicationController
 	end
 
 	def show
+<<<<<<< HEAD
 		# Define variables via params hash
 		@station = Station.find(params[:id])
 		direction = params[:direction]
