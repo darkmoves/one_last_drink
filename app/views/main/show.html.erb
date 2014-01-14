@@ -1,3 +1,5 @@
+<% if @valid == true %>
+
 <h4> The last train leaves <strong><%= @station.name %></strong> in...</h4>
 <div class="time-container">
 	<h3><%=@time[0]%> HOURS, <%=@time[1]%> MINUTES</h3>
@@ -5,11 +7,18 @@
 
 <h4><%= @message %></h4>
 
+
+<% else %>
+
+	<p> No need to catch a train, you're already at the destination, <strong><%=@station.name %></strong>. Here's a bar suggestion.</p>
+
+<% end %>
+
 <div class="bar-container">
 	<h4><strong><%= @name %></strong></h4>
 	<h5><%=@address%></h5>
 </div>
 
 <div class='link'>
-<%= link_to 'Another Round!', home_path %>
+	<%= link_to 'Another Round!', home_path %>
 </div>
