@@ -16,11 +16,8 @@
 	<div class="line-form small-8 small-centered columns" id='red-line-form'>	
 		<%= form_tag "/main/show", method: "get" do %>
 			<%= select_tag('id', options_from_collection_for_select(@red_line_stations, :id, :name), class: 'station-dropdown') %>
-
-			<label><input type='radio' name='direction' value='nb' />Alewife</label>
-
-			<label><input type='radio' name='direction' value='sb' />Ashmont/Braintree</label>
-			</br>
+			<label><input type='radio' name='direction' value='nb' />Alewife</label></br>
+			<label><input type='radio' name='direction' value='sb' />Ashmont/Braintree</label></br>
 			<%= submit_tag "One Last Drink?" %>
 		<% end %>
 	</div>
@@ -36,12 +33,8 @@
 	<div class="line-form small-10 small-centered columns" id='orange-line-form'>	
 		<%= form_tag "/main/show", method: "get" do %>
 			<%= select_tag('id', options_from_collection_for_select(@orange_line_stations, :id, :name), class: 'station-dropdown') %>
-			<label>
-				<input type='radio' name='direction' value='nb' />Up
-			</label>
-			<label>
-				<input type='radio' name='direction' value='sb' />Down
-			</label>
+			<label><input type='radio' name='direction' value='nb' />Oak Grove</label></br>
+			<label><input type='radio' name='direction' value='sb' />Forest Hills</label></br>
 			<%= submit_tag "One Last Drink?" %>
 		<% end %>
 	</div>
@@ -57,10 +50,8 @@
 	<div class="line-form small-10 small-centered columns" id='green-line-form'>	
 		<%= form_tag("/main/show", method: "get") do %>
 			<%= select_tag('id', options_from_collection_for_select(@green_line_stations, :id, :name), class: 'station-dropdown') %>
-			<%= label_tag(:direction_nb, "Lechmere") %>
-			<%= radio_button_tag(:direction, 'nb') %></br>
-			<%= label_tag(:direction_sb, "BC/Cleveland Circle/Riverside/Heath St") %>
-			<%= radio_button_tag(:direction, 'sb') %></br>
+			<label><input type='radio' name='direction' value='nb' />Lechmere</label></br>
+			<label><input type='radio' name='direction' value='sb' />BC/Cleveland Circle/Riverside/Heath St</label></br>
 			<%= submit_tag "One Last Drink?" %>
 		<% end %>
 	</div>
@@ -76,10 +67,8 @@
 	<div class="line-form small-10 small-centered columns" id='blue-line-form'>	
 		<%= form_tag("/main/show", method: "get") do %>
 			<%= select_tag('id', options_from_collection_for_select(@blue_line_stations, :id, :name), class: 'station-dropdown') %>
-			<%= label_tag(:direction_nb, "Wonderland") %>
-			<%= radio_button_tag(:direction, 'nb') %></br>
-			<%= label_tag(:direction_sb, "Bowdoin") %>
-			<%= radio_button_tag(:direction, 'sb') %></br>
+			<label><input type='radio' name='direction' value='nb' />Wonderland</label></br>
+			<label><input type='radio' name='direction' value='sb' />Bowdoin</label></br>
 			<%= submit_tag "One Last Drink?" %>
 		<% end %>
 	</div>
