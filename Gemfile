@@ -9,7 +9,7 @@ gem 'pg'
 gem 'pry-rails', group: :development
 
 group :test do
-	gem 'rspec'
+	gem 'rspec-rails'
 	gem 'simplecov'
 	gem 'coveralls'
 	gem 'shoulda-matchers'
