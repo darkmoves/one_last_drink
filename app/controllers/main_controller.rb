@@ -28,13 +28,13 @@ class MainController < ApplicationController
 			t_now = Time.now.utc
 
 			# Get the time remaining until the last train using the time_comparison class method. Returns a 2 element hash with hours, minutes.
-			time = Calculation.time_comparison(t_train, t_now)
+			time = Trip.time_comparison(t_train, t_now)
 
 			# Create the variable to display time using the elements from the time hash. format_time  method adds a 0 before single digit minutes for display.
-			@time = Calculation.format_time(time)
+			@time = Trip.format_time(time)
 			
 			# Use the time difference to pick a message to display.
-			@message = Calculation.find_message(@time, @name)
+			@message = Trip.find_message(@time, @name)
 		else
 			@valid = false
 		end
