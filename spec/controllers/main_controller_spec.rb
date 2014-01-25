@@ -29,10 +29,16 @@ describe MainController do
 	describe "GET #show" do
 		it "responds successfully with a HTTP 200 status code" do
 
-			get :index
+			get :show
 			expect(response).to be_success
 			expect(response.status).to eq(200)
 		end
+
+		it "renders the show template" do
+			get :show
+			expect(response).to render_template("show")
+		end
+
 	end
 
 end
