@@ -15,7 +15,7 @@ describe MainController do
 			expect(response).to render_template("index")
 		end
 
-		it "properly assigns T stations to each of the 4 lines" do
+		it "properly assigns T stations to instance variables for each of the 4 lines" do
 			station1, station2, station3, station4 = Station.create(line: 'red'), Station.create(line: 'orange'),Station.create(line: 'green'),Station.create(line: 'blue')
 
 			get :index
