@@ -28,7 +28,6 @@ var Page = {
 };
 
 $(function(){
-				// Page.slideToViz('#red-line-container', '#red-line-form');
 				Page.slideToViz('#red-line-container', '#red-line-form', '#orange-line-form', '#green-line-form', '#blue-line-form');
 				Page.slideToViz('#orange-line-container', '#orange-line-form', '#red-line-form', '#green-line-form', '#blue-line-form');
 				Page.slideToViz('#green-line-container', '#green-line-form', '#red-line-form', '#orange-line-form', '#blue-line-form');
