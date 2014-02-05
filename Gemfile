@@ -57,7 +57,11 @@ gem 'rails_12factor', group: :production
 # add foundation
 gem 'foundation-rails'
 
+# add new relic in order to keep the heroku dyno awake
 gem 'newrelic_rpm'
+
+# add HTTParty for JSON calls
+gem 'httparty'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
