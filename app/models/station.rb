@@ -30,7 +30,7 @@ class Station < ActiveRecord::Base
       predictions = []
       times = []
       response = HTTParty.get("http://developer.mbta.com/lib/rthr/#{self.line}.json")
-
+binding.pry
       trips = response["TripList"]["Trips"]
       
       trips.each {|trip| predictions << trip["Predictions"]}
