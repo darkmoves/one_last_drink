@@ -25,4 +25,21 @@ class Station < ActiveRecord::Base
 		end
 	end
 
+  def next_train
+    if self.line != "green"
+      predictions = []
+      times = []
+      response = HTTParty.get("http://developer.mbta.com/lib/rthr/#{self.line}.json")
+
+      trips = response["TripList"]["Trips"]
+      
+      trips.each {|trip| predictions << trip["Predictions"]}
+      predictions.flatten!
+      
+      predictions.each {|prediction| if prediction["Stop"] == self.name then times << prediction["Seconds"] end}
+
+      times.sort.first
+    end
+  end
+
 end

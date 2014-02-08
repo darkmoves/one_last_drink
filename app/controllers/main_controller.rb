@@ -40,6 +40,7 @@ class MainController < ApplicationController
 
       # Use the time difference to pick a message to display.
       @message = Trip.find_message(@time, @name)
+      @next_time = @station.next_train
     else
       @valid = false
     end

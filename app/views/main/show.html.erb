@@ -1,5 +1,10 @@
 <% if @valid == true %>
 
+<h4> The next train leaves <strong><%= @station.name %></strong> in...</h4>
+<div class="next-time">
+  <h1><%=@next_time%></h1>
+</div>
+
 <h4> The last train leaves <strong><%= @station.name %></strong> in...</h4>
 <div class="time-container">
 	<h3><%=@time[0]%> HOURS, <%=@time[1]%> MINUTES</h3>
