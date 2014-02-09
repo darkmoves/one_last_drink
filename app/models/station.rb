@@ -25,19 +25,29 @@ class Station < ActiveRecord::Base
 		end
 	end
 
-  def next_train
-    if self.line != "green"
-      predictions = []
-      times = []
-      response = HTTParty.get("http://developer.mbta.com/lib/rthr/#{self.line}.json")
-binding.pry
-      trips = response["TripList"]["Trips"]
-      
-      trips.each {|trip| predictions << trip["Predictions"]}
-      predictions.flatten!
-      
-      predictions.each {|prediction| if prediction["Stop"] == self.name then times << prediction["Seconds"] end}
+  def next_train(direction)
+    times = []
+    predictions = []
 
+    if self.line != "green"
+      response = HTTParty.get("http://developer.mbta.com/lib/rthr/#{self.line}.json")
+      trips = response["TripList"]["Trips"]
+
+      if direction == 'nb' && line == 'red'
+        trips.each {|trip| if trip["Destination"] == 'Alewife' then predictions << trip["Predictions"] end}
+      elsif direction == 'sb' && line == 'red'
+        trips.each {|trip| if (trip["Destination"] == 'Ashmont' || trip["Destination"] == 'Braintree') then predictions << trip["Predictions"] end}
+      elsif direction == 'nb' && line == 'orange'
+        trips.each {|trip| if trip["Destination"] == 'Oak Grove' then predictions << trip["Predictions"] end}
+      elsif direction == 'sb' && line == 'orange'
+        trips.each {|trip| if trip["Destination"] == 'Forest Hills' then predictions << trip["Predictions"] end}
+      elsif direction == 'nb' && line == 'blue'
+        trips.each {|trip| if trip["Destination"] == 'Wonderland' then predictions << trip["Predictions"] end}
+      elsif direction == 'sb' && line == 'blue'
+        trips.each {|trip| if trip["Destination"] == 'Bowdoin' then predictions << trip["Predictions"] end}
+      end
+      predictions.flatten!
+      predictions.each {|prediction| if prediction["Stop"] == self.mbta_id then times << prediction["Seconds"] end}
       times.sort.first
     end
   end
