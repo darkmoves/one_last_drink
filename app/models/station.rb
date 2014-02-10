@@ -48,6 +48,7 @@ class Station < ActiveRecord::Base
       end
       predictions.flatten!
       predictions.each {|prediction| if prediction["Stop"] == self.mbta_id then times << prediction["Seconds"] end}
+binding.pry
       times.sort.first
     end
   end
