@@ -26,7 +26,7 @@ class MainController < ApplicationController
       # Declare the current time in UTC to match the time zone
       # of the scheduled last trains.
       t_train = @station.last_train(direction)
-      t_now = Time.now.utc
+      t_now = Chronic.parse("now")
 
       # Get the time remaining until the last train using the
       # time_comparison class method. Returns a 2 element hash

@@ -47,7 +47,7 @@ class Station < ActiveRecord::Base
         trips.each {|trip| if trip["Destination"] == 'Bowdoin' then predictions << trip["Predictions"] end}
       end
       predictions.flatten!
-      predictions.each {|prediction| if prediction["Stop"] == self.mbta_id then times << prediction["Seconds"] end}
+      predictions.each {|prediction| if prediction["Stop"] == self.mbta_id then times << prediction["Seconds"] unless (prediction["Seconds"] < 0) end}
 
       times.sort.first
     end
