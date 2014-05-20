@@ -15,13 +15,13 @@
 
 <% else %>
 
-	<p> No need to catch a train, you're already at the destination, <strong><%=@station.name %></strong>. Here's a bar suggestion.</p>
+	<p> No need to catch a train, you're already at the destination, <strong><%= @station.name %></strong>. Here's a bar suggestion.</p>
 
 <% end %>
 
 <div class="bar-container">
-	<h4><strong><%= @name %></strong></h4>
-	<h5><%=@address%></h5>
+	<h4><strong><%= @bar.name %></strong></h4>
+	<h5><%= @bar.address %></h5>
 </div>
 
 <div class='link'>
