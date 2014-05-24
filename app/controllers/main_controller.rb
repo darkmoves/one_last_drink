@@ -1,23 +1,14 @@
 # Controller for the page. Runs all the views.
 class MainController < ApplicationController
   def index
-    @red_line_stations = Station.where(line: 'red')
-    @orange_line_stations = Station.where(line: 'orange')
-    @green_line_stations = Station.where(line: 'green')
-    @blue_line_stations = Station.where(line: 'blue')
+    TrainLines::LINE_COLORS.each { |color| instance_variable_set("@#{color}_line_stations", Station.where(line: "#{color}")) }
   end
 
   def show
     @station = Station.find(params[:id])
     direction = params[:direction]
 
-    # Select a bar hash from the Yelp API using the find_bar class method.
-    @bar = @station.find_bar
-
-    # Extract bar attributes from the bar hash to display in the view.
-    @name = @bar['name']
-    @address = @bar['location']['display_address'].split.join(', ')
-    @rating = @bar['rating']
+    @bar = Bar.new(@station.find_bar)
 
     if Trip.valid?(@station, direction)
       @valid = true
@@ -39,7 +30,7 @@ class MainController < ApplicationController
       @time = Trip.format_time(time)
 
       # Use the time difference to pick a message to display.
-      @message = Trip.find_message(@time, @name)
+      @message = Trip.find_message(@time, @bar)
       @next_time = @station.next_train(direction)
     else
       @valid = false
