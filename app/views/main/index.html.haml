@@ -1,0 +1,64 @@
+%h3 TIME FOR ONE LAST DRINK?
+
+.tutorial-container
+  %h6{ class: 'tutorial-first', id: 'select-line' } 1) Select a T line.
+  %h6{ class: 'tutorial', id: 'select-station' } 2) Select a T stop from the menu.Select a T Line
+  %h6{ class: 'tutorial', id: 'select-destination' } 3) Select a direction.
+  %h6{ class: 'tutorial', id: 'select-submit' } One Last Drink?
+
+%div{ class: "red-line" }
+  .line-container.small-centered.columns{ id: "red-line-container" }
+    %h3 <em>RED</em>
+
+  .line-form.small-8.small-centered.columns{ id: "red-line-form" }
+    = form_tag "/main/show", method: "get" do
+      = select_tag('id', options_from_collection_for_select(@red_line_stations, :id, :name), class: 'station-dropdown')
+      %label
+        %input{ type: 'radio', name: 'direction', value: 'nb'}= "Alewife"
+      %br
+      %label
+        %input{ type: 'radio', name: 'direction', value: 'sb'}= "Ashmont/Braintree"
+      = submit_tag "One Last Drink"
+
+%div{ class: "orange-line" }
+  .line-container.small-centered.columns{ id: "orange-line-container" }
+    %h3 <em>ORANGE</em>
+
+  .line-form.small-8.small-centered.columns{ id: "orange-line-form" }
+    = form_tag "/main/show", method: "get" do
+      = select_tag('id', options_from_collection_for_select(@orange_line_stations, :id, :name), class: 'station-dropdown')
+      %label
+        %input{ type: 'radio', name: 'direction', value: 'nb'}= "Oak Grove"
+      %br
+      %label
+        %input{ type: 'radio', name: 'direction', value: 'sb'}= "Forest Hills"
+      = submit_tag "One Last Drink"
+
+%div{ class: "green-line" }
+  .line-container.small-centered.columns{ id: "green-line-container" }
+    %h3 <em>GREEN</em>
+
+  .line-form.small-8.small-centered.columns{ id: "green-line-form" }
+    = form_tag "/main/show", method: "get" do
+      = select_tag('id', options_from_collection_for_select(@green_line_stations, :id, :name), class: 'station-dropdown')
+      %label
+        %input{ type: 'radio', name: 'direction', value: 'nb'}= "Lechmere"
+      %br
+      %label
+        %input{ type: 'radio', name: 'direction', value: 'sb'}= "Boston College/Cleveland Circle/Riverside/Heath Street"
+      = submit_tag "One Last Drink"
+
+%div{ class: "blue-line" }
+  .line-container.small-centered.columns{ id: "blue-line-container" }
+    %h3 <em>BLUE</em>
+
+  .line-form.small-8.small-centered.columns{ id: "blue-line-form" }
+    = form_tag "/main/show", method: "get" do
+      = select_tag('id', options_from_collection_for_select(@blue_line_stations, :id, :name), class: 'station-dropdown')
+      %label
+        %input{ type: 'radio', name: 'direction', value: 'nb'}= "Wonderland"
+      %br
+      %label
+        %input{ type: 'radio', name: 'direction', value: 'sb'}= "Bowdoin"
+      = submit_tag "One Last Drink"
+

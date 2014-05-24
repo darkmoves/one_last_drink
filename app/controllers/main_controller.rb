@@ -1,7 +1,7 @@
 # Controller for the page. Runs all the views.
 class MainController < ApplicationController
   def index
-    TrainLines::LINE_COLORS.each { |color| instance_variable_set("@#{color}_line_stations", Station.where(line: "#{color}")) }
+    Trainline::LINE_COLORS.each { |color| instance_variable_set("@#{color}_line_stations", Station.where(line: "#{color}")) }
   end
 
   def show
