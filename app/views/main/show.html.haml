@@ -1,0 +1,20 @@
+- if @valid == true
+  %h4= "The next train leaves #{ @station.name } in..."
+  .next-time
+    %h1= @next_time
+
+  %h4= "The last train leaves #{ @station.name } in..."
+  .time-container
+    %h3= "#{@time[0]} HOURS, #{@time[1]} MINUTES"
+
+  %h4= @message
+
+- else
+  %p= "No need to catch a train, you're already at the destination, #{@station.name}. Here's a bar suggestion"
+
+.bar-container
+  %h4= "#{ @bar.name }"
+  %h5= "#{ @bar.address}"
+
+.link
+  = link_to 'Another Round!', home_path
