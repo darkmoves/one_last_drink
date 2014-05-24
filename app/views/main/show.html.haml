@@ -7,8 +7,6 @@
   .time-container
     %h3= "#{@time[0]} HOURS, #{@time[1]} MINUTES"
 
-  %h4= @message
-
 - else
   %p= "No need to catch a train, you're already at the destination, #{@station.name}. Here's a bar suggestion"
 
@@ -17,4 +15,4 @@
   %h5= "#{ @bar.address}"
 
 .link
-  = link_to 'Another Round!', home_path
+  = link_to 'Another Round!', home_path, class: "button"

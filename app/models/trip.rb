@@ -42,7 +42,7 @@ class Trip < ActiveRecord::Base
 		elsif (1 <= time[0].to_i) && (time[0].to_i <= 20)
 			"Plenty of time. Hit up #{bar.name} for a few rounds."
 		elsif (time[0].to_i == 0) && (15 < time[1].to_i) 
-			"Ready for a quick round at #{name}?"
+			"Ready for a quick round at #{bar.name}?"
 		elsif (time[0].to_i == 0) && (time[1].to_i <= 15)
 			"Time to catch the train!"
 		else

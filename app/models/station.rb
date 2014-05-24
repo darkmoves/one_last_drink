@@ -25,9 +25,7 @@ class Station < ActiveRecord::Base
 		end
 	end
 
-  def next_train(direction)
-    times = []
-    predictions = []
+  def next_train(direction, times = [], predictions = [])
 
     if self.line != "green"
       response = HTTParty.get("http://developer.mbta.com/lib/rthr/#{self.line}.json")
